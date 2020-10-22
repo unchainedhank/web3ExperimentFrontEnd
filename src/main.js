@@ -16,9 +16,11 @@ Vue.use(ElementUI);
 
 
 const routes = new VueRouter({
+  mode: 'history',
   routes: [
-    { path: '/', component: () => import('../src/pages/Login.vue')},
-    { path: '/success', component: () => import('../src/pages/Success')}
+    { path: '/login', component: () => import('../src/pages/Login.vue')},
+    { path: '/success', component: () => import('../src/pages/Success.vue')},
+    // { path: '/login/*', component: Error}
   ]
 })
 
